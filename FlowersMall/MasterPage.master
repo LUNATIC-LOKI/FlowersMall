@@ -16,7 +16,6 @@
     </style>
     <script type="text/javascript" src="JS/jquery.min.js"></script>
     <script src="JS/MasterPage.js"></script>
-
 </head>
 <body>
     <form id="form1" runat="server">
