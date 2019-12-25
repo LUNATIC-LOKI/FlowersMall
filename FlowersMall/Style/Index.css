@@ -1,0 +1,137 @@
+﻿body {
+
+}
+
+
+/*---------------------------------- 动态轮播图区 --------------- start ----------------------------------------*/
+.slideshow {
+    width: 100%;
+    min-width: 1200px;
+    height: 440px;
+    margin-bottom: 30px;
+    /*background-color: red;*/
+}
+.center-left-img {
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+    /*内容溢出修剪 */
+}
+/*--------------------- 图片盒子 ------- start ---------*/
+.imgBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.img-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.slide-img-active {
+    animation: slide 3s 1;
+}
+.slide-img-out {
+    opacity: 0;
+}
+@keyframes slide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*--------------------- 图片盒子 ------- end ---------*/
+/*--------------------- 浮动圆点 ------- start ---------*/
+.dot {
+    position: absolute;
+    display: block;
+    width: 150px;
+    /*right: 5px;*/
+    left: 44%;
+    bottom: 15px;
+    z-index: 999;
+}
+    .dot div {
+        float: left;
+        width: 15px;
+        margin-right: 15px;
+    }
+.dot1 {
+    color: #FF6600;
+}
+.dot2, .dot3, .dot4, .dot5 {
+    color: rgba(0, 0, 0, 0.175);
+}
+.dot i {
+    cursor: pointer;
+    /*手 光标形状*/
+}
+    /*鼠标悬停*/
+    .dot i:hover {
+        color: #FF6600;
+    }
+/*--------------------- 浮动圆点 ------- end ---------*/
+/*--------------------- 切换箭头 ------- start ---------*/
+.switcher-div {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 440px;
+    pointer-events: none;
+    /*允许点击穿透*/
+}
+.switcher {
+    position: absolute;
+    top: 200px;
+    color: #8A8A8A;
+    margin: 0 auto;
+    cursor: pointer;
+    /*手 光标形状*/
+    z-index: 999;
+    pointer-events: auto;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.175);
+    /*不允许点击穿透*/
+}
+.s-left {
+    left: 250px;
+    color: transparent;
+    /*transition: left 0.5s;*/
+    /*left属性值改变时 产生0.5秒过渡效果*/
+}
+.s-right {
+    right: 250px;
+    color: transparent;
+    /*transition: right 0.5s;*/
+    /*right属性值改变时 产生0.5秒过渡效果*/
+    transform: rotate(180deg);
+    /*箭头文字180度旋转*/
+    -ms-transform: rotate(180deg);
+    /* Internet Explorer 9*/
+    -moz-transform: rotate(180deg);
+    /* Firefox */
+    -webkit-transform: rotate(180deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(180deg);
+    /* Opera */
+}
+    /*鼠标悬停*/
+    .s-left:hover,
+    .s-right:hover {
+        color: white;
+    }
+/*--------------------- 切换箭头 ------- end ---------*/
+/*---------------------------------- 动态轮播图区 --------------- end ----------------------------------------*/
+
+
+
+
+
+

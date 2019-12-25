@@ -1,0 +1,338 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <%--<title></title>--%>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+        <title></title>
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        @import url("Style/MasterPage.css");
+    </style>
+    <script type="text/javascript" src="JS/jquery.min.js"></script>
+    <script src="JS/MasterPage.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- 顶部导航 -->
+    <div class="M-top">
+        <div class="container">
+            <ul class="M-top-l">
+                <li class="menu">
+                    <asp:HyperLink ID="HyperLink5" runat="server">收藏鲜花网 &nbsp;</asp:HyperLink>
+                </li>
+                <li class="menu dropdown"> 
+                    <asp:HyperLink ID="HyperLink6" runat="server">关注微信&nbsp;</asp:HyperLink>
+                    <div class="dropdown-menu dropdown-weixin">
+                    </div>
+                </li>
+                <li class="menu dropdown"> 
+                    <asp:HyperLink ID="HyperLink7" runat="server">花礼网 &nbsp;</asp:HyperLink>
+                    <div class="dropdown-menu dropdown-weixin">
+                    </div>
+                </li>
+            </ul>
+            <ul class="M-top-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login">
+                    <asp:HyperLink ID="HyperLink8" runat="server">你好，请登录</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink9" runat="server">&nbsp;注册&nbsp;</asp:HyperLink>
+                </li>
+                <!--登陆状态信息显示end--> 
+                <li class="M-top-pipe">|</li>
+                <li class="menu">
+                    <asp:HyperLink ID="HyperLink10" runat="server">&nbsp;订单查询 &nbsp;</asp:HyperLink>
+                </li>
+                <li class="M-top-pipe">|</li>
+                <!--我的花礼信息显示start-->
+                <li class="menu dropdown">
+                    <asp:HyperLink ID="HyperLink11" runat="server">&nbsp;我的花礼 &nbsp;</asp:HyperLink>
+                </li>
+                <!--我的花礼信息显示end-->
+                <li class="M-top-pipe">|</li>
+                <li class="menu dropdown">
+                    <asp:HyperLink ID="HyperLink12" runat="server"> &nbsp;客户服务 &nbsp;</asp:HyperLink>
+                </li>
+                <li class="M-top-pipe">|</li>
+                <!--购物车信息显示start-->
+                <li class="menu dropdown">
+                    <asp:HyperLink ID="HyperLink13" runat="server">&nbsp; 购物车 &nbsp;</asp:HyperLink>
+                    <div></div>
+                </li>
+                <!--购物车信息显示end-->
+                <li class="M-top-pipe">|</li>
+                <li class="menu slogan">
+                    中国鲜花礼品网:中国鲜花网领先品牌
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+
+    <!-- 头部 start-->
+    <header>
+        <!-- logo start-->
+        <div class="M-top-logo">
+            放logo图片
+              <%--<img src="" />--%>
+        </div>
+        <!-- logo End-->
+        <!-- 搜索区 start-->
+        <div class="M-top-ss">
+            <div class="ss-box">
+                <asp:TextBox ID="TextBox1" runat="server" CssClass="ss-textbox" BorderStyle="None" Placeholder="商品关键词" ></asp:TextBox>
+            </div>
+            <asp:Button ID="Button1" runat="server" Text="搜索" CssClass="ss-but" BorderStyle="None" />
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                <p>
+                    <asp:HyperLink ID="HyperLink15" runat="server">红玫瑰</asp:HyperLink>
+                    &nbsp;|&nbsp;
+                    <asp:HyperLink ID="HyperLink16" runat="server">穆斯女神</asp:HyperLink>
+                    &nbsp;|&nbsp;
+                    <asp:HyperLink ID="HyperLink17" runat="server">生日鲜花</asp:HyperLink>
+                    &nbsp;|&nbsp;
+                    <asp:HyperLink ID="HyperLink18" runat="server">礼品卡</asp:HyperLink>
+                </p>
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- 搜索区 End-->
+        <!-- 联系区 start-->
+        <div class="M-top-lx">
+            <p>
+                <i>图 &nbsp;</i>400-889-8188 &nbsp;
+                | &nbsp;<i>图 &nbsp;</i><a>在线客服</a>
+            </p>
+        </div>
+        <!-- 联系区 End-->
+    </header>
+    <!-- 头部 End -->
+
+    <!-- 中间主要内容区 start -->
+    <div class="M-content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            <!-- 导航栏 start -->
+            <div class="M-nav">
+                <!-- 全部商品导购 start -->
+                <div class="nav-con">
+                    <div class="categorys">
+                        <h3 class="categorys-title">
+                            <asp:HyperLink ID="HyperLink14" runat="server">全部商品导购</asp:HyperLink>
+                        </h3>
+                    </div>
+                    <div class="dropdown-cate">
+                        <!-- 鲜花系列 start -->
+                        <h4>
+                            <asp:HyperLink ID="HyperLink19" runat="server">鲜花系列</asp:HyperLink>
+                        </h4>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="HyperLink20" runat="server">情侣系列</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink21" runat="server">生日系列</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink22" runat="server">婚庆系列</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink23" runat="server">生活系列</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink24" runat="server">商务系列</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink25" runat="server">殡仪系列</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink26" runat="server">其它系列</asp:HyperLink>
+                            </li>
+                        </ul>
+                        <!-- 鲜花系列 end -->
+                        <!-- 鲜花花材 start -->
+                        <h4>
+                            <asp:HyperLink ID="HyperLink27" runat="server">鲜花花材</asp:HyperLink>
+                        </h4>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="HyperLink28" runat="server">玫瑰</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink29" runat="server">康乃馨</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink30" runat="server">百合</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink31" runat="server">向日葵</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink32" runat="server">扶郎</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink33" runat="server">郁金香</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink34" runat="server">马蹄莲</asp:HyperLink>
+                            </li>
+                        </ul>
+                        <!-- 鲜花花材 end -->                        
+                        <!-- 永生花 start -->                        
+                        <div class="cate-cake stature1" >
+                            <asp:HyperLink ID="HyperLink35" runat="server">
+                                <span>></span>
+                                永生花
+                            </asp:HyperLink>
+                            <div class="M-baffle1"></div>
+                            <div class="right-menu rm1" style="bottom: 227px; display: none;">
+                                <b style="bottom: 191px;"></b>
+                                <h5>永生花类别</h5>
+                                <div class="link-img">
+                                    <asp:HyperLink ID="HyperLink39" runat="server">
+                                        <img src="//img02.hua.com/pc/pimg/ysh_brand_menu_01.jpg" height="62" width="96">经典花盒
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink40" runat="server">
+                                        <img src="//img02.hua.com/pc/pimg/ysh_brand_menu_02.jpg" height="62" width="96">巨型玫瑰
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink41" runat="server">
+                                        <img src="//img02.hua.com/pc/pimg/ysh_brand_menu_03.jpg" height="62" width="96">薰衣草
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink42" runat="server">
+                                        <img src="//img02.hua.com/pc/pimg/ysh_brand_menu_04.jpg" height="62" width="96">永生瓶花
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink43" runat="server">
+                                        <img src="//img02.hua.com/pc/pimg/ysh_brand_menu_05.jpg" height="62" width="96">特色永生花
+                                    </asp:HyperLink>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink36" runat="server">永生瓶花</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink37" runat="server">经典花盒</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink38" runat="server">巨型玫瑰</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink45" runat="server">特色永生花</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink46" runat="server">薰衣草</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 永生花 end --> 
+                        <!-- 礼品 start -->                        
+                        <div class="cate-cake stature2">
+                            <asp:HyperLink ID="HyperLink44" runat="server">
+                                <span>></span>
+                                礼品
+                            </asp:HyperLink>
+                            <div class="M-baffle2"></div>
+                            <div class="right-menu rm2" style="bottom: 227px; display: none;">
+                                <h5>礼品类别</h5>
+                                <div class="link-img">
+                                    <asp:HyperLink ID="HyperLink47" runat="server">
+                                        <img src="//img02.hua.com/pc/assets/img/gifts/gifts-musicbox.png" height="62" width="58">音乐盒
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink48" runat="server">
+                                        <img src="//img02.hua.com/pc/assets/img/gifts/gifts-goldenflower.png" height="62" width="58">金箔花
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink49" runat="server">
+                                        <img src="//img02.hua.com/pc/assets/img/gifts/gifts-crystallaser.png" height="62" width="58">3D水晶内雕
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink50" runat="server">
+                                        <img src="//img02.hua.com/pc/assets/img/gifts/gifts-shoushi.png" height="62" width="58">首饰/美妆
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink51" runat="server">
+                                        <img src="//img02.hua.com/pc/assets/img/gifts/gifts-chocolates.png" height="62" width="58">巧克力
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink52" runat="server">
+                                        <img src="//img02.hua.com/pc/assets/img/gifts/gifts-toys.png" height="62" width="58">公仔/睡枕
+                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink53" runat="server">
+                                        <img src="//img02.hua.com/pc/assets/img/gifts/gifts-dengshi.png" height="62" width="58">摆件/其他
+                                    </asp:HyperLink>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink54" runat="server">音乐盒</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink55" runat="server">金箔花</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink56" runat="server">3D水晶内雕</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink57" runat="server">首饰/美妆</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink58" runat="server">巧克力</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink59" runat="server">公仔/睡枕</asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink60" runat="server">摆件/其他</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 礼品 end -->                                               
+                    </div>
+                </div>
+                <!-- 全部商品导购 end -->
+                <ul class="nav">
+                    <li>
+                        <asp:HyperLink ID="HyperLink1" runat="server">鲜花套餐</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink2" runat="server">永生花</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink62" runat="server">花材</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink3" runat="server">礼品</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink61" runat="server">花语大全</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink4" runat="server">关于我们</asp:HyperLink>
+                    </li>
+                </ul>
+                
+            </div>
+            <!-- 导航栏 end -->
+        </asp:ContentPlaceHolder>
+        
+        <!-- 主要内容编辑区 start -->
+        <div class="M-content-con">
+            
+            <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- 主要内容编辑区 end -->        
+    </div>
+    <!-- 中间主要内容区 end -->
+
+    <!-- 底部信息栏 start -->
+    <div class="M-bottom">
+            
+    </div>
+    <!-- 底部信息栏 end -->
+
+
+    </form>
+</body>
+</html>

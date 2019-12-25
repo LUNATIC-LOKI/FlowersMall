@@ -1,0 +1,7 @@
+本文件夹下的资源为icon字体，
+在阿里巴巴矢量图库下载，
+demo_index.html为教程页，
+除demo.css和demo_index.html文件外，本文件夹下其他文件都是必要的，
+本项目使用的是Unicode 引用方法，详情操作请查看demo_index.html文件，
+操作：只需调试文件iconfont.css即可
+
